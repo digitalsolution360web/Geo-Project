@@ -20,10 +20,21 @@ export default function Header() {
     setIsOpen(false);
   }, [pathname]);
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur-xl shadow-sm">
       <div className="mx-auto flex max-w-[1700px] items-center gap-3 px-4 py-3 sm:gap-4 md:gap-8 md:px-8 lg:px-12">
-        <Link href="/" className="flex min-w-0 flex-shrink-0 items-center gap-4 group/logo">
+        <Link
+          href="/"
+          onClick={handleLogoClick}
+          className="flex min-w-0 flex-shrink-0 items-center gap-4 group/logo"
+        >
           <div className="relative flex items-center justify-center h-12 w-12 md:h-20 md:w-20 rounded-full bg-white overflow-hidden border-2 border-[#16a34a]/40 shadow-md transition-all duration-300 group-hover/logo:border-[#16a34a] group-hover/logo:shadow-lg">
             <Image
               src="/logo.jpg"
