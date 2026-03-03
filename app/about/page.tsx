@@ -93,7 +93,7 @@ export default function AboutPage() {
                     <Image src="/About_Us_3.jpg" alt="Principles 1" fill className="object-cover" />
                   </div>
                   <div className="relative h-[200px] overflow-hidden rounded-[2.5rem] border border-slate-100 bg-white shadow-xl transform hover:-translate-y-2 transition-transform duration-500">
-                    <Image src="/Home_4.jpg" alt="Context 1" fill className="object-cover" />
+                    <Image src="/Enterprice_2.jpg" alt="Context 1" fill className="object-cover" />
                   </div>
                 </div>
                 <div className="space-y-6 pt-12">
@@ -101,7 +101,7 @@ export default function AboutPage() {
                     <Image src="/Service_6.jpg" alt="Context 2" fill className="object-cover" />
                   </div>
                   <div className="relative h-[320px] overflow-hidden rounded-[2.5rem] border border-slate-100 bg-white shadow-xl transform hover:-translate-y-2 transition-transform duration-500">
-                    <Image src="/About_Us_1.jpg" alt="Principles 2" fill className="object-cover" />
+                    <Image src="/Home_4.jpg" alt="Principles 2" fill className="object-cover" />
                   </div>
                 </div>
               </div>
@@ -170,7 +170,7 @@ export default function AboutPage() {
             <Reveal direction="right" width="100%">
               <div className="space-y-12 h-full flex flex-col justify-center">
                 <div className="relative aspect-video rounded-[2.5rem] overflow-hidden border-2 border-slate-100 shadow-2xl">
-                  <Image src="/Enterprice_2.jpg" alt="Leadership Visualization" fill className="object-cover" />
+                  <Image src="/Environ_9.jpg" alt="Leadership Visualization" fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
                 </div>
 

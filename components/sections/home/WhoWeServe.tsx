@@ -6,28 +6,28 @@ export default function WhoWeServe() {
     {
       title: "Government & Local Councils",
       description: "We deliver evidence-based spatial analysis to inform planning, regulatory oversight, infrastructure strategy, and sustainable community development.",
-      image: "/Environ_9.jpg",
+      image: "/Case_Study_1.jpg",
     },
     {
       title: "Infrastructure & Utilities",
       description: "We assist infrastructure providers in integrating spatial data into planning, optimisation, and risk mitigation strategies.",
-      image: "/Environ_8.jpg",
+      image: "/Case_Study_2.jpg",
     },
     {
       title: "Environmental & Climate Agencies",
       description: "We provide advanced geospatial modelling to support environmental monitoring, climate adaptation, and sustainability initiatives.",
-      image: "/Environ_7.jpg",
+      image: "/Case_Study_3.jpg",
     },
     {
       title: "Mining & Energy Projects",
       description: "We help resource and energy organisations manage environmental risk, regulatory obligations, and site development decisions using defensible spatial intelligence. (Don't include the points)",
-      image: "/Environ_6.jpg",
+      image: "/Case_Study_4.jpg",
 
     },
     {
       title: "Public Health & Research",
       description: "Private & Commercial Enterprises: We support organisations seeking to integrate spatial intelligence into strategic planning, site selection, environmental compliance, and investment decisions. (Don’t include the points)",
-      image: "/Environ_5.jpg",
+      image: "/Case_Study_5.jpg",
     },
     {
       title: "Private & Commercial Enterprises",
