@@ -170,7 +170,7 @@ export default function AboutPage() {
             <Reveal direction="right" width="100%">
               <div className="space-y-12 h-full flex flex-col justify-center">
                 <div className="relative aspect-video rounded-[2.5rem] overflow-hidden border-2 border-slate-100 shadow-2xl">
-                  <Image src="/Environ_9.jpg" alt="Leadership Visualization" fill className="object-cover" />
+                  <Image src="/Leadership_1.webp" alt="Leadership Visualization" fill className="object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
                 </div>
 
