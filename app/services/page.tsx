@@ -183,7 +183,7 @@ export default function ServicesPage() {
         <Reveal direction="right" width="100%">
           <div className="relative aspect-square lg:aspect-video rounded-[3rem] overflow-hidden border border-slate-100 shadow-2xl group">
             <Image
-              src="/Environ_9.jpg"
+              src="/Plateform_1.webp"
               alt="Technical Capability"
               fill
               className="object-cover transition-transform duration-1000 group-hover:scale-110"
