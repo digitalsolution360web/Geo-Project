@@ -155,7 +155,7 @@ export default function ContactLayout() {
                 </div>
                 <div className="space-y-4">
                   <p className="inline-block text-[10px] font-black uppercase tracking-[0.4em] text-[#16a34a] bg-[#16a34a]/10 px-4 py-1.5 rounded-full border border-[#16a34a]/20">
-                    Our Location
+                    Our HQ
                   </p>
                   <p className="text-xl font-black text-slate-900">Brisbane, Australia</p>
                 </div>

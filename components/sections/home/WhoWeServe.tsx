@@ -20,14 +20,14 @@ export default function WhoWeServe() {
     },
     {
       title: "Mining & Energy Projects",
-      description: "We help resource and energy organisations manage environmental risk, regulatory obligations, and site development decisions using defensible spatial intelligence. (Don't include the points)",
+      description: "We help resource and energy organisations manage environmental risk, regulatory obligations, and site development decisions using defensible spatial intelligence.",
       image: "/Mining_1.webp",
 
     },
     {
       title: "Public Health & Research",
-      description: "Private & Commercial Enterprises: We support organisations seeking to integrate spatial intelligence into strategic planning, site selection, environmental compliance, and investment decisions. (Don’t include the points)",
-      image: "/Health_1.webp",
+      description: "Private & Commercial Enterprises: We support organisations seeking to integrate spatial intelligence into strategic planning, site selection, environmental compliance, and investment decisions.",
+image: "/Health_1.webp",
     },
     {
       title: "Private & Commercial Enterprises",
