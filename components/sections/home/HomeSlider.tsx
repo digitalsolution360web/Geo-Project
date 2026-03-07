@@ -9,6 +9,7 @@ export default function HomeSlider() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const images = [
+        "/home1111.webp",
         "/Case_Study_1.jpg",
         "/Case_Study_2.jpg",
         "/Case_Study_3.jpg",
