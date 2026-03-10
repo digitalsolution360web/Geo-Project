@@ -32,7 +32,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
   const result = await res.json();
 
-  alert(result.message);
+  // alert(result.message);
 
   setLoading(false);
   form.reset();
@@ -166,19 +166,31 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
               <div className="md:col-span-2 flex flex-col gap-6 pt-4 sm:flex-row sm:items-center sm:justify-between">
                 <button
-                  type="submit"
-                  disabled={loading}
-                  className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-[#16a34a] px-10 py-4 text-sm font-black text-white transition-all hover:bg-[#166534] hover:shadow-[0_0_25px_rgba(22,163,74,0.4)] hover:scale-105"
-                >
-                   {loading ? "Sending..." : `
-                  <span className="relative z-10 flex items-center gap-2">
-                    Submit Enquiry
-                    <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </span>
-                  `}
-                </button>
+  type="submit"
+  disabled={loading}
+  className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-[#16a34a] px-10 py-4 text-sm font-black text-white transition-all hover:bg-[#166534] hover:shadow-[0_0_25px_rgba(22,163,74,0.4)] hover:scale-105"
+>
+  {loading ? (
+    "Sending..."
+  ) : (
+    <span className="relative z-10 flex items-center gap-2">
+      Submit Enquiry
+      <svg
+        className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={3}
+          d="M14 5l7 7m0 0l-7 7m7-7H3"
+        />
+      </svg>
+    </span>
+  )}
+</button>
                 <p className="text-[11px] font-bold text-slate-500 uppercase tracking-widest max-w-[300px] leading-relaxed">
                   By submitting, you agree to our processing of your geospatial project details.
                 </p>

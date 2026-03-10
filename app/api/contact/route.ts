@@ -15,7 +15,7 @@ export async function POST(req: Request) {
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: "arpitkumar994@gmail.com",
+      to: process.env.EMAIL_PERSON,
       subject: `${subject}`,
       html: `
         <h2>New Geo Pro Message</h2>
