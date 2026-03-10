@@ -94,6 +94,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                   id="name"
                   type="text"
                   name="name"
+                  required
                   placeholder="Your name"
                   className="w-full rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 font-bold"
                 />
@@ -107,6 +108,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                   id="email"
                   type="email"
                   name="email"
+                  required
                   placeholder="you@organisation.com"
                   className="w-full rounded-2xl border-2 border-slate-200 bg-slate-50 px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 font-bold"
                 />
