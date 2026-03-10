@@ -1,7 +1,43 @@
+"use client";
 import Image from "next/image";
 import { Reveal } from "@/components/animations/Reveal";
+import useState from "react";
 
 export default function ContactLayout() {
+  const [loading, setLoading] = useState(false);
+
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setLoading(true);
+
+  const form = e.currentTarget; // safer than e.target
+  const formData = new FormData(form);
+
+  const data = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    organisation: formData.get("organisation"),
+    country: formData.get("country"),
+    subject: formData.get("subject"),
+    message: formData.get("message"),
+  };
+
+  const res = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  const result = await res.json();
+
+  alert(result.message);
+
+  setLoading(false);
+  form.reset();
+  window.location.href = '/thank-you';
+};
   return (
     <section className="relative space-y-12  sm:space-y-20">
       {/* Background Atmosphere - Restore for depth */}
@@ -49,7 +85,7 @@ export default function ContactLayout() {
               Tell us about your project
             </h2>
 
-            <form className="grid gap-8 md:grid-cols-2">
+            <form className="grid gap-8 md:grid-cols-2" onSubmit={handleSubmit}>
               <div className="space-y-2">
                 <label htmlFor="name" className="text-xs font-black uppercase tracking-widest text-slate-700 ml-1">
                   Full name
@@ -57,6 +93,7 @@ export default function ContactLayout() {
                 <input
                   id="name"
                   type="text"
+                  name="name"
                   placeholder="Your name"
                   className="w-full rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 font-bold"
                 />
@@ -69,6 +106,7 @@ export default function ContactLayout() {
                 <input
                   id="email"
                   type="email"
+                  name="email"
                   placeholder="you@organisation.com"
                   className="w-full rounded-2xl border-2 border-slate-200 bg-slate-50 px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 font-bold"
                 />
@@ -81,6 +119,7 @@ export default function ContactLayout() {
                 <input
                   id="organisation"
                   type="text"
+                  name="organisation"
                   placeholder="Organisation / department"
                   className="w-full rounded-2xl border-2 border-slate-200 bg-slate-50 px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 font-bold"
                 />
@@ -93,6 +132,7 @@ export default function ContactLayout() {
                 <input
                   id="country"
                   type="text"
+                  name="country"
                   placeholder="Your country"
                   className="w-full rounded-2xl border-2 border-slate-200 bg-slate-50 px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 font-bold"
                 />
@@ -105,6 +145,7 @@ export default function ContactLayout() {
                 <input
                   id="subject"
                   type="text"
+                  name="subject"
                   placeholder="e.g. Urban planning, risk mapping"
                   className="w-full rounded-2xl border-2 border-slate-200 bg-slate-50 px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 font-bold"
                 />
@@ -117,6 +158,7 @@ export default function ContactLayout() {
                 <textarea
                   id="message"
                   rows={5}
+                  name="message"
                   placeholder="Describe your use case, locations of interest, timelines, and any existing data sources."
                   className="w-full rounded-3xl border-2 border-slate-200 bg-white px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 resize-none font-bold"
                 />
@@ -125,14 +167,17 @@ export default function ContactLayout() {
               <div className="md:col-span-2 flex flex-col gap-6 pt-4 sm:flex-row sm:items-center sm:justify-between">
                 <button
                   type="submit"
+                  disabled={loading}
                   className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-[#16a34a] px-10 py-4 text-sm font-black text-white transition-all hover:bg-[#166534] hover:shadow-[0_0_25px_rgba(22,163,74,0.4)] hover:scale-105"
                 >
+                   {loading ? "Sending..." : `
                   <span className="relative z-10 flex items-center gap-2">
                     Submit Enquiry
                     <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </span>
+                  `}
                 </button>
                 <p className="text-[11px] font-bold text-slate-500 uppercase tracking-widest max-w-[300px] leading-relaxed">
                   By submitting, you agree to our processing of your geospatial project details.

@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    const { name, phone, treatment, date } = await req.json();
+    const { name, email, organisation, country, subject, message } = await req.json();
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -15,20 +15,21 @@ export async function POST(req: Request) {
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
-      subject: "New Dental Appointment Request",
+      to: "arpitkumar994@gmail.com",
+      subject: `${subject}`,
       html: `
-        <h2>New Appointment Request</h2>
+        <h2>New Geo Pro Message</h2>
         <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Treatment:</strong> ${treatment}</p>
-        <p><strong>Preferred Date:</strong> ${date}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Organisation:</strong> ${organisation}</p>
+        <p><strong>Country:</strong> ${country}</p>
+        <p><strong>Message:</strong> ${message}</p>
       `,
     });
 
     return NextResponse.json({
       success: true,
-      message: "Appointment request sent successfully",
+      message: "Message sent successfully",
     });
   } catch (error) {
     console.error(error);
@@ -36,7 +37,7 @@ export async function POST(req: Request) {
     return NextResponse.json(
       {
         success: false,
-        message: "Failed to send appointment request",
+        message: "Failed to send message",
       },
       { status: 500 }
     );
