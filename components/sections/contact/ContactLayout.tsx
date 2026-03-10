@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Reveal } from "@/components/animations/Reveal";
-import useState from "react";
+import {useState} from "react";
 
 export default function ContactLayout() {
   const [loading, setLoading] = useState(false);
