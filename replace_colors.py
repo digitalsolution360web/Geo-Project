@@ -17,7 +17,7 @@ replacements = {
     'via-red-': 'via-green-',
     'to-red-': 'to-green-',
     'ring-red-': 'ring-green-',
-    'contact@geodecision.com': 'info@geodecisionanalytics.com',
+    # 'contact@geodecision.com': 'info@geodecisionanalytics.com',
     'Request a consultation': 'Request a Quote'
 }
 
