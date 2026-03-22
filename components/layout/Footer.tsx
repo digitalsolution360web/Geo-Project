@@ -88,8 +88,10 @@ export default function Footer() {
             </p>
             <div className="space-y-4">
 
-              {/* <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 leading-none mb-1">Email</p> */}
-              {/* <p className="text-sm font-bold text-white transition-colors hover:text-[#16a34a]">info@geodecisionanalytics.com</p> */}
+              <div className="space-y-1">
+                <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 leading-none mb-1">Email</p>
+                <a href="mailto:Info@geodecisionanalytics.com" className="text-sm font-bold text-white transition-colors hover:text-[#16a34a]">Info@geodecisionanalytics.com</a>
+              </div>
 
 
               <div className="space-y-1">

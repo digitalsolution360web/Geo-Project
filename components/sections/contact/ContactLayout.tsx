@@ -171,7 +171,7 @@ export default function ContactLayout() {
                     </div>
                     <div>
                       <p className="text-[10px] font-black uppercase tracking-widest text-slate-600 leading-none mb-1">Email</p>
-                      {/* <p className="text-base font-black text-slate-900">info@geodecisionanalytics.com</p> */}
+                      <a href="mailto:Info@geodecisionanalytics.com" className="text-base font-black text-slate-900 hover:text-[#16a34a] transition-colors">Info@geodecisionanalytics.com</a>
                     </div>
                   </div>
 
