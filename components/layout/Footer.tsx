@@ -124,7 +124,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-[13.5px] font-bold text-cyan-400 transition-all duration-300 hover:text-cyan-300 hover:underline underline-offset-4"
             >
-              Digitalsolution.com
+              Digital Solution 360
             </a>
           </div>
         </div>
