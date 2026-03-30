@@ -45,6 +45,7 @@ export default function Footer() {
                 <Link
                   key={social.name}
                   href={social.href}
+                  target="_blank"
                   className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/5 bg-white/5 text-slate-400 transition-all hover:border-[#16a34a]/30 hover:text-[#16a34a] hover:bg-[#16a34a]/5 cursor-pointer"
                 >
                   <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
