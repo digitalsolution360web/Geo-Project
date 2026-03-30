@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/animations/Reveal";
+import ContactForm from "@/components/sections/contact/ContactForm";
 
 export default function ContactLayout() {
   return (
@@ -22,7 +23,8 @@ export default function ContactLayout() {
                 Let&apos;s talk about your <span className="text-gradient">geospatial project.</span>
               </h1>
               <p className="text-xl leading-relaxed text-slate-700 md:text-2xl font-bold">
-               Share a bit about your project, location, timeline and decision support. We typically respond within one business day.
+                Share a bit about your locations, timelines, and decision-makers. We
+                typically respond within one business day.
               </p>
             </div>
 
@@ -48,96 +50,7 @@ export default function ContactLayout() {
               Tell us about your project
             </h2>
 
-            <form className="grid gap-8 md:grid-cols-2">
-              <div className="space-y-2">
-                <label htmlFor="name" className="text-xs font-black uppercase tracking-widest text-slate-700 ml-1">
-                  Full name
-                </label>
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="Your name"
-                  className="w-full rounded-2xl border-2 border-slate-200 bg-white px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 font-bold"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-xs font-black uppercase tracking-widest text-slate-700 ml-1">
-                  Work email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="you@organisation.com"
-                  className="w-full rounded-2xl border-2 border-slate-200 bg-slate-50 px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 font-bold"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="organisation" className="text-xs font-black uppercase tracking-widest text-slate-700 ml-1">
-                  Organisation
-                </label>
-                <input
-                  id="organisation"
-                  type="text"
-                  placeholder="Organisation / department"
-                  className="w-full rounded-2xl border-2 border-slate-200 bg-slate-50 px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 font-bold"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="country" className="text-xs font-black uppercase tracking-widest text-slate-700 ml-1">
-                  Country
-                </label>
-                <input
-                  id="country"
-                  type="text"
-                  placeholder="Your country"
-                  className="w-full rounded-2xl border-2 border-slate-200 bg-slate-50 px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 font-bold"
-                />
-              </div>
-
-              <div className="md:col-span-2 space-y-2">
-                <label htmlFor="subject" className="text-xs font-black uppercase tracking-widest text-slate-700 ml-1">
-                  Subject
-                </label>
-                <input
-                  id="subject"
-                  type="text"
-                  placeholder="e.g. Urban planning, risk mapping"
-                  className="w-full rounded-2xl border-2 border-slate-200 bg-slate-50 px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 font-bold"
-                />
-              </div>
-
-              <div className="md:col-span-2 space-y-2">
-                <label htmlFor="message" className="text-xs font-black uppercase tracking-widest text-slate-700 ml-1">
-                  Project details
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  placeholder="Describe your use case, locations of interest, timelines, and any existing data sources."
-                  className="w-full rounded-3xl border-2 border-slate-200 bg-white px-5 py-4 text-sm text-slate-900 shadow-sm outline-none transition-all focus:border-[#16a34a] focus:ring-4 focus:ring-[#16a34a]/10 placeholder:text-slate-500 resize-none font-bold"
-                />
-              </div>
-
-              <div className="md:col-span-2 flex flex-col gap-6 pt-4 sm:flex-row sm:items-center sm:justify-between">
-                <button
-                  type="submit"
-                  className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-[#16a34a] px-10 py-4 text-sm font-black text-white transition-all hover:bg-[#166534] hover:shadow-[0_0_25px_rgba(22,163,74,0.4)] hover:scale-105"
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Submit Enquiry
-                    <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </span>
-                </button>
-                <p className="text-[11px] font-bold text-slate-500 uppercase tracking-widest max-w-[300px] leading-relaxed">
-                  By submitting, you agree to our processing of your geospatial project details.
-                </p>
-              </div>
-            </form>
+            <ContactForm />
           </div>
         </Reveal>
 
