@@ -23,8 +23,7 @@ export default function ContactLayout() {
                 Let&apos;s talk about your <span className="text-gradient">geospatial project.</span>
               </h1>
               <p className="text-xl leading-relaxed text-slate-700 md:text-2xl font-bold">
-                Share a bit about your locations, timelines, and decision-makers. We
-                typically respond within one business day.
+               Share a bit about your project, location, timeline and decision support. We typically respond within one business day.
               </p>
             </div>
 
